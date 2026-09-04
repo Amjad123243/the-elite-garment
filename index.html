@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Elite Garment | Premium Garment Manufacturing</title>
+
+  <meta name="description" content="Premium garment manufacturing and textile sourcing for fashion brands worldwide.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #092b26;
+      --green-light: #123d35;
+      --gold: #c5a15a;
+      --cream: #f6f1e8;
+      --white: #ffffff;
+      --dark: #171a18;
+      --grey: #6d706d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(9, 43, 38, 0.96);
+      border-bottom: 1px solid rgba(197, 161, 90, 0.35);
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 4px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+      color: var(--white);
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--gold);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(5, 28, 24, 0.97), rgba(5, 28, 24, 0.64)),
+        url("images/hero.jpg") center/cover no-repeat;
+      padding-top: 84px;
+    }
+
+    .hero-content {
+      max-width: 740px;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 0.78rem;
+      margin-bottom: 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(3.3rem, 8vw, 6.7rem);
+      line-height: 0.92;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    .hero-text {
+      max-width: 610px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.05rem;
+      margin-bottom: 38px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 28px;
+      border: 1px solid var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.76rem;
+      transition: 0.25s;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--green);
+    }
+
+    .button-outline {
+      color: var(--white);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--white);
+      border-color: var(--white);
+      color: var(--green);
+    }
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 56px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-heading h2 {
+      color: var(--green);
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .section-heading p {
+      color: var(--grey);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-mark {
+      min-height: 470px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      background: var(--green);
+      border: 1px solid var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 8rem;
+      letter-spacing: -18px;
+    }
+
+    .about-content h2 {
+      color: var(--green);
+      font-size: clamp(2.7rem, 5vw, 4.5rem);
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+
+    .about-content p {
+      color: var(--grey);
+      margin-bottom: 18px;
+    }
+
+    .collections {
+      background: var(--white);
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .collection-card {
+      position: relative;
+      min-height: 650px;
+      overflow: hidden;
+      background: var(--green);
+    }
+
+    .collection-card img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s;
+    }
+
+    .collection-card:hover img {
+      transform: scale(1.035);
+    }
+
+    .collection-info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 45px 34px 32px;
+      color: var(--white);
+      background: linear-gradient(transparent, rgba(4, 24, 21, 0.95));
+    }
+
+    .collection-info span {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.7rem;
+    }
+
+    .collection-info h3 {
+      font-size: 2.4rem;
+      margin-top: 5px;
+    }
+
+    .expertise {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .expertise .section-heading h2 {
+      color: var(--white);
+    }
+
+    .expertise .section-heading p {
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(197, 161, 90, 0.4);
+    }
+
+    .expertise-item {
+      padding: 38px 25px;
+      border-right: 1px solid rgba(197, 161, 90, 0.4);
+    }
+
+    .expertise-item:last-child {
+      border-right: 0;
+    }
+
+    .number {
+      display: block;
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .expertise-item h3 {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+    }
+
+    .expertise-item p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.9rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .product {
+      min-height: 310px;
+      padding: 32px;
+      display: flex;
+      align-items: flex-end;
+      color: var(--white);
+      background: var(--green-light);
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .product h3 {
+      font-size: 2rem;
+    }
+
+    .contact {
+      text-align: center;
+      background: var(--white);
+    }
+
+    .contact-details {
+      margin: 36px auto;
+      max-width: 760px;
+      color: var(--grey);
+    }
+
+    .contact-details a {
+      color: var(--green);
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 35px 0;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.65);
+      background: #051d1a;
+      font-size: 0.76rem;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 850px) {
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 84px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 18px 5%;
+        background: var(--green);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 14px 0;
+      }
+
+      .about-grid,
+      .collection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        gap: 45px;
+      }
+
+      .about-mark {
+        min-height: 330px;
+      }
+
+      .expertise-grid,
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .expertise-item:nth-child(2) {
+        border-right: 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      section {
+        padding: 80px 0;
+      }
+
+      .brand {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+      }
+
+      .hero-content {
+        padding: 60px 0;
+      }
+
+      .collection-card {
+        min-height: 520px;
+      }
+
+      .expertise-grid,
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .expertise-item {
+        border-right: 0;
+        border-bottom: 1px solid rgba(197, 161, 90, 0.4);
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="#home">THE ELITE GARMENT</a>
+
+      <button class="menu-button" id="menuButton" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Premium Garment Manufacturing</p>
+
+          <h1>Crafted for distinction.</h1>
+
+          <p class="hero-text">
+            Premium garments and exceptional fabrics created for fashion
+            brands that value quality, precision and timeless design.
+          </p>
+
+          <div class="buttons">
+            <a class="button button-gold" href="#collections">
+              Explore Collections
+            </a>
+
+            <a class="button button-outline" href="#contact">
+              Work With Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-mark">EG</div>
+
+        <div class="about-content">
+          <p class="eyebrow">About The Elite Garment</p>
+
+          <h2>Where premium materials meet exceptional craftsmanship.</h2>
+
+          <p>
+            The Elite Garment specializes in manufacturing premium clothing
+            using carefully selected fabrics and trusted production partners
+            around the world.
+          </p>
+
+          <p>
+            From denim and T-shirts to linen shirts, knitwear and trousers,
+            we support brands through fabric selection, product development,
+            manufacturing oversight and quality control.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="collections" id="collections">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Selected Collections</p>
+          <h2>Made to be remembered.</h2>
+          <p>
+            Discover premium denim, polos and linen garments developed with
+            attention to fabric, construction and finishing.
+          </p>
+        </div>
+
+        <div class="collection-grid">
+          <article class="collection-card">
+            <img src="images/premium-collection.jpg" alt="Premium polo and denim collection">
+
+            <div class="collection-info">
+              <span>Signature Collection</span>
+              <h3>Premium Polo & Denim</h3>
+            </div>
+          </article>
+
+          <article class="collection-card">
+            <img src="images/linen-collection.jpg" alt="Premium linen shirt collection">
+
+            <div class="collection-info">
+              <span>Natural Refinement</span>
+              <h3>The Linen Edition</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise" id="expertise">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our Expertise</p>
+          <h2>From concept to finished garment.</h2>
+          <p>
+            A complete manufacturing approach built around quality,
+            consistency and reliable delivery.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-item">
+            <span class="number">01</span>
+            <h3>Fabric Sourcing</h3>
+            <p>Premium materials selected to meet each collection’s requirements.</p>
+          </article>
+
+          <article class="expertise-item">
+            <span class="number">02</span>
+            <h3>Product Development</h3>
+            <p>From initial concept and samples to production-ready garments.</p>
+          </article>
+
+          <article class="expertise-item">
+            <span class="number">03</span>
+            <h3>Manufacturing</h3>
+            <p>Production through trusted and experienced manufacturing partners.</p>
+          </article>
+
+          <article class="expertise-item">
+            <span class="number">04</span>
+            <h3>Quality Control</h3>
+            <p>Careful inspection for fabric, construction, finishing and consistency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">What We Manufacture</p>
+          <h2>Premium essentials, precisely made.</h2>
+        </div>
+
+        <div class="products-grid">
+          <article class="product"><h3>Denim</h3></article>
+          <article class="product"><h3>Polos & T-Shirts</h3></article>
+          <article class="product"><h3>Linen Shirts</h3></article>
+          <article class="product"><h3>Knitwear & Trousers</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Start Your Collection</p>
+          <h2>Let’s manufacture something exceptional.</h2>
+          <p>
+            Contact our team to discuss your garment requirements,
+            materials and production needs.
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <p>
+            <a href="tel:+971502807970">+971 50 280 7970</a>
+          </p>
+
+          <p>
+            <a href="mailto:info@the-elite-garment.com">
+              info@the-elite-garment.com
+            </a>
+          </p>
+
+          <p>
+            RAKEZ, Al Nakheel Business Tower 2, Office B312,<br>
+            Ras Al Khaimah, United Arab Emirates
+          </p>
+        </div>
+
+        <div class="buttons" style="justify-content:center">
+          <a class="button button-gold"
+             href="https://wa.me/971502807970"
+             target="_blank"
+             rel="noopener">
+            Contact on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 The Elite Garment. All rights reserved.
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    menuButton.addEventListener("click", function () {
+      navLinks.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+      });
+    });
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Elite Garment | Premium Garment Manufacturing</title>
+
+  <meta name="description" content="Premium garment manufacturing and textile sourcing for fashion brands worldwide.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #092b26;
+      --green-light: #123d35;
+      --gold: #c5a15a;
+      --cream: #f6f1e8;
+      --white: #ffffff;
+      --dark: #171a18;
+      --grey: #6d706d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(9, 43, 38, 0.96);
+      border-bottom: 1px solid rgba(197, 161, 90, 0.35);
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 4px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+      color: var(--white);
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--gold);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(5, 28, 24, 0.97), rgba(5, 28, 24, 0.64)),
+        url("images/hero.jpg") center/cover no-repeat;
+      padding-top: 84px;
+    }
+
+    .hero-content {
+      max-width: 740px;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 0.78rem;
+      margin-bottom: 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(3.3rem, 8vw, 6.7rem);
+      line-height: 0.92;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    .hero-text {
+      max-width: 610px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.05rem;
+      margin-bottom: 38px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 28px;
+      border: 1px solid var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.76rem;
+      transition: 0.25s;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--green);
+    }
+
+    .button-outline {
+      color: var(--white);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--white);
+      border-color: var(--white);
+      color: var(--green);
+    }
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 56px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-heading h2 {
+      color: var(--green);
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .section-heading p {
+      color: var(--grey);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-mark {
+      min-height: 470px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      background: var(--green);
+      border: 1px solid var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 8rem;
+      letter-spacing: -18px;
+    }
+
+    .about-content h2 {
+      color: var(--green);
+      font-size: clamp(2.7rem, 5vw, 4.5rem);
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+
+    .about-content p {
+      color: var(--grey);
+      margin-bottom: 18px;
+    }
+
+    .collections {
+      background: var(--white);
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .collection-card {
+      position: relative;
+      min-height: 650px;
+      overflow: hidden;
+      background: var(--green);
+    }
+
+    .collection-card img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s;
+    }
+
+    .collection-card:hover img {
+      transform: scale(1.035);
+    }
+
+    .collection-info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 45px 34px 32px;
+      color: var(--white);
+      background: linear-gradient(transparent, rgba(4, 24, 21, 0.95));
+    }
+
+    .collection-info span {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.7rem;
+    }
+
+    .collection-info h3 {
+      font-size: 2.4rem;
+      margin-top: 5px;
+    }
+
+    .expertise {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .expertise .section-heading h2 {
+      color: var(--white);
+    }
+
+    .expertise .section-heading p {
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(197, 161, 90, 0.4);
+    }
+
+    .expertise-item {
+      padding: 38px 25px;
+      border-right: 1px solid rgba(197, 161, 90, 0.4);
+    }
+
+    .expertise-item:last-child {
+      border-right: 0;
+    }
+
+    .number {
+      display: block;
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .expertise-item h3 {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+    }
+
+    .expertise-item p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.9rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .product {
+      min-height: 310px;
+      padding: 32px;
+      display: flex;
+      align-items: flex-end;
+      color: var(--white);
+      background: var(--green-light);
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .product h3 {
+      font-size: 2rem;
+    }
+
+    .contact {
+      text-align: center;
+      background: var(--white);
+    }
+
+    .contact-details {
+      margin: 36px auto;
+      max-width: 760px;
+      color: var(--grey);
+    }
+
+    .contact-details a {
+      color: var(--green);
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 35px 0;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.65);
+      background: #051d1a;
+      font-size: 0.76rem;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 850px) {
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 84px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 18px 5%;
+        background: var(--green);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 14px 0;
+      }
+
+      .about-grid,
+      .collection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        gap: 45px;
+      }
+
+      .about-mark {
+        min-height: 330px;
+      }
+
+      .expertise-grid,
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .expertise-item:nth-child(2) {
+        border-right: 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      section {
+        padding: 80px 0;
+      }
+
+      .brand {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+      }
+
+      .hero-content {
+        padding: 60px 0;
+      }
+
+      .collection-card {
+        min-height: 520px;
+      }
+
+      .expertise-grid,
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .expertise-item {
+        border-right: 0;
+        border-bottom: 1px solid rgba(197, 161, 90, 0.4);
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="#home">THE ELITE GARMENT</a>
+
+      <button class="menu-button" id="menuButton" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Premium Garment Manufacturing</p>
+
+          <h1>Crafted for distinction.</h1>
+
+          <p class="hero-text">
+            Premium garments and exceptional fabrics created for fashion
+            brands that value quality, precision and timeless design.
+          </p>
+
+          <div class="buttons">
+            <a class="button button-gold" href="#collections">
+              Explore Collections
+            </a>
+
+            <a class="button button-outline" href="#contact">
+              Work With Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-mark">EG</div>
+
+        <div class="about-content">
+          <p class="eyebrow">About The Elite Garment</p>
+
+          <h2>Where premium materials meet exceptional craftsmanship.</h2>
+
+          <p>
+            The Elite Garment specializes in manufacturing premium clothing
+            using carefully selected fabrics and trusted production partners
+            around the world.
+          </p>
+
+          <p>
+            From denim and T-shirts to linen shirts, knitwear and trousers,
+            we support brands through fabric selection, product development,
+            manufacturing oversight and quality control.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="collections" id="collections">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Selected Collections</p>
+          <h2>Made to be remembered.</h2>
+          <p>
+            Discover premium denim, polos and linen garments developed with
+            attention to fabric, construction and finishing.
+          </p>
+        </div>
+
+        <div class="collection-grid">
+          <article class="collection-card">
+            <img src="images/premium-collection.jpg" alt="Premium polo and denim collection">
+
+            <div class="collection-info">
+              <span>Signature Collection</span>
+              <h3>Premium Polo & Denim</h3>
+            </div>
+          </article>
+
+          <article class="collection-card">
+            <img src="images/linen-collection.jpg" alt="Premium linen shirt collection">
+
+            <div class="collection-info">
+              <span>Natural Refinement</span>
+              <h3>The Linen Edition</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise" id="expertise">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our Expertise</p>
+          <h2>From concept to finished garment.</h2>
+          <p>
+            A complete manufacturing approach built around quality,
+            consistency and reliable delivery.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-item">
+            <span class="number">01</span>
+            <h3>Fabric Sourcing</h3>
+            <p>Premium materials selected to meet each collection’s requirements.</p>
+          </article>
+
+          <article class="expertise-item">
+            <span class="number">02</span>
+            <h3>Product Development</h3>
+            <p>From initial concept and samples to production-ready garments.</p>
+          </article>
+
+          <article class="expertise-item">
+            <span class="number">03</span>
+            <h3>Manufacturing</h3>
+            <p>Production through trusted and experienced manufacturing partners.</p>
+          </article>
+
+          <article class="expertise-item">
+            <span class="number">04</span>
+            <h3>Quality Control</h3>
+            <p>Careful inspection for fabric, construction, finishing and consistency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">What We Manufacture</p>
+          <h2>Premium essentials, precisely made.</h2>
+        </div>
+
+        <div class="products-grid">
+          <article class="product"><h3>Denim</h3></article>
+          <article class="product"><h3>Polos & T-Shirts</h3></article>
+          <article class="product"><h3>Linen Shirts</h3></article>
+          <article class="product"><h3>Knitwear & Trousers</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Start Your Collection</p>
+          <h2>Let’s manufacture something exceptional.</h2>
+          <p>
+            Contact our team to discuss your garment requirements,
+            materials and production needs.
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <p>
+            <a href="tel:+971502807970">+971 50 280 7970</a>
+          </p>
+
+          <p>
+            <a href="mailto:info@the-elite-garment.com">
+              info@theelitegarment.com
+            </a>
+          </p>
+
+          <p>
+            RAKEZ, Al Nakheel Business Tower 2, Office B312,<br>
+            Ras Al Khaimah, United Arab Emirates
+          </p>
+        </div>
+
+        <div class="buttons" style="justify-content:center">
+          <a class="button button-gold"
+             href="https://wa.me/971502807970"
+             target="_blank"
+             rel="noopener">
+            Contact on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 The Elite Garment. All rights reserved.
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    menuButton.addEventListener("click", function () {
+      navLinks.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+      });
+    });
+  </script>
+</body>
+</html>
