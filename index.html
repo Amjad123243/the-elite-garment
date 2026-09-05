@@ -527,6 +527,22 @@
     letter-spacing: 1.2px;
   }
 }
+    .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.button-outline:hover {
+  background: var(--gold);
+  color: var(--green);
+}
   </style>
 </head>
 
@@ -566,7 +582,19 @@
           brands that value quality, precision and timeless design.
         </p>
 
-        <a class="button" href="#collections">Explore Collections</a>
+        <div class="hero-buttons">
+  <a class="button" href="#collections">
+    Explore Collections
+  </a>
+
+  <a
+    class="button button-outline"
+    href="https://wa.me/971502807970?text=Hello%20The%20Elite%20Garment%2C%20I%20would%20like%20to%20request%20a%20manufacturing%20quotation.%0A%0AProduct%20type%3A%0AQuantity%3A%0AFabric%3A%0ACompany%20%2F%20Country%3A"
+    target="_blank"
+    rel="noopener">
+    Request a Quote
+  </a>
+</div>
       </div>
 
       <div class="hero-image">
