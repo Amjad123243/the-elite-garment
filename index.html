@@ -490,6 +490,43 @@
         padding: 20px;
       }
     }
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #0b3b32;
+}
+
+.logo img {
+  width: 64px !important;
+  height: 54px !important;
+  object-fit: contain;
+}
+
+.logo span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .logo {
+    gap: 7px;
+  }
+
+  .logo img {
+    width: 48px !important;
+    height: 42px !important;
+  }
+
+  .logo span {
+    font-size: 15px;
+    letter-spacing: 1.2px;
+  }
+}
   </style>
 </head>
 
@@ -497,11 +534,10 @@
 
   <header>
     <nav class="container">
-      <a class="logo" href="#home">
-        <img
-          src="https://raw.githubusercontent.com/Amjad123243/the-elite-garment/main/images/logo.png"
-          alt="The Elite Garment logo">
-      </a>
+      <a class="logo" href="#home" aria-label="The Elite Garment home">
+  <img src="https://raw.githubusercontent.com/Amjad123243/the-elite-garment/main/images/logo.png" alt="The Elite Garment logo">
+  <span>THE ELITE GARMENT</span>
+</a>
 
       <button class="menu-button" id="menuButton" aria-label="Open menu">
         ☰
